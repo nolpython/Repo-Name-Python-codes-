@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/movie.css' %}">
+</head>
+<body>
+    <h1>Movie page</h1>
+    <hr>
+    <table align="center">
+        <tr>
+            <td>
+                <a href="/add_movie/" role="button" class="btn btn-primary btn-lg">Add movie</a>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <a href="/list_movie/" class="btn btn-primary btn-lg" role="button">List movie</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

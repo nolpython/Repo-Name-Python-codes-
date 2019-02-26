@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Movie Page</title>
+    <link rel="stylesheet" href="{% static 'css/movie.css' %}">
+</head>
+<body>
+    <h1>Movies List</h1><hr>
+    {% if qs %}
+        <table align="center" border="2" width="90%">
+            <tr>
+                <th>Release Date</th>
+                <th>Movie Name</th>
+                <th>Movie Hero</th>
+                <th>Movie Heroine</th>
+                <th>Movie Rating</th>
+            </tr>
+
+            {% for x in qs %}
+                <tr>
+                    <td align="center">
+                        {{ x.rdate }}
+                    </td>
+
+                    <td align="center">
+                        {{ x.movieName }}
+                    </td>
+
+                    <td align="center">
+                        {{ x.hero }}
+                    </td>
+
+                    <td align="center">
+                        {{ x.heroine }}
+                    </td>
+
+                    <td align="center">
+                        {{ x.rating }}
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </table>
+    {% endif %}
+{#    {% for x in qs %}#}
+{#        {{ x.hero }}#}
+{#    {% endfor %}#}
+{#    {{ qs }}#}
+</body>
+</html>
